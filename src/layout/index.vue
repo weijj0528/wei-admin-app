@@ -1,7 +1,7 @@
 <template>
   <div class="micro-layout">
     <header class="micro-topbar">
-      <span class="title">wei-app-template（子应用模板）</span>
+      <span class="title">wei-admin-app（子应用模板）</span>
       <span class="info">平台：{{ micro.currentPlatform || '-' }}</span>
       <span class="info">用户：{{ micro.username || '-' }}</span>
       <el-tag v-if="micro.standalone" type="warning" size="small">独立模式</el-tag>

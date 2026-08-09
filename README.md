@@ -1,4 +1,4 @@
-# wei-app-template
+# wei-admin-app
 
 wei-saas 前端**子应用模板**。基于 wujie-vue3 微前端，被主应用 `wei-admin-web` 加载；也可脱离主应用独立运行调试。复制本工程即可快速创建业务子应用。
 
@@ -55,7 +55,7 @@ npm run dev      # http://localhost:8100
 npm run build    # 产物在 dist/
 ```
 
-将 `dist/` 部署到 CDN/Nginx，把部署 URL（如 `https://apps.example.com/wei-app-template/`）填入平台 `entryUrl` 或菜单 `component`。若部署在子路径，需同步调整 `vite.config.ts` 的 `base` 与路由 `createWebHistory(base)`。
+将 `dist/` 部署到 CDN/Nginx，把部署 URL（如 `https://apps.example.com/wei-admin-app/`）填入平台 `entryUrl` 或菜单 `component`。若部署在子路径，需同步调整 `vite.config.ts` 的 `base` 与路由 `createWebHistory(base)`。
 
 ## 改造为业务子应用
 

@@ -20,7 +20,7 @@ const router = createRouter({
 })
 
 router.afterEach((to) => {
-  document.title = (to.meta.title as string) || 'wei-app-template'
+  document.title = (to.meta.title as string) || 'wei-admin-app'
 })
 
 export default router

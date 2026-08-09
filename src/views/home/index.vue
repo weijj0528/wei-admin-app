@@ -41,7 +41,7 @@ const maskedToken = computed(() => {
 const lastReceived = ref('')
 
 function emitToHost() {
-  getBus().$emit(BUS_EVENTS.SUBAPP_EVENT, { from: 'wei-app-template', time: Date.now() })
+  getBus().$emit(BUS_EVENTS.SUBAPP_EVENT, { from: 'wei-admin-app', time: Date.now() })
   ElMessage.success('已向主应用发送 subapp-event')
 }
 
