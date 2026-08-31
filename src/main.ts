@@ -8,6 +8,8 @@ import App from './App.vue'
 import router from './router'
 import { useMicroStore } from '@/store/micro'
 import { vPermission } from '@/utils/permission'
+import { getBus } from './micro/wujie'
+import { BUS_EVENTS } from './micro/bus'
 import './style.css'
 
 let app: VueApp | null = null
@@ -24,6 +26,13 @@ function createAndMount() {
   app.use(router)
   app.use(ElementPlus, { locale: zhCn })
   app.directive('permission', vPermission)
+
+  // 主应用侧边栏菜单导航 -> 子应用内部路由跳转（独立模式 bus 为 no-op，不生效）
+  getBus().$on(BUS_EVENTS.ROUTE_CHANGE, (path: string) => {
+    if (path && router.currentRoute.value.path !== path) {
+      router.push(path).catch(() => { /* 重复/取消导航忽略 */ })
+    }
+  })
 
   // 初始化子应用上下文：wujie 模式读 props，独立模式读 localStorage
   useMicroStore().init()

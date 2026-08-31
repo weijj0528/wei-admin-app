@@ -5,6 +5,8 @@
 export const BUS_EVENTS = {
   /** 主应用平台切换 -> 子应用同步 currentPlatform */
   PLATFORM_CHANGE: 'platform-change',
+  /** 主应用侧边栏导航 -> 子应用内部路由跳转（payload：子应用路径，如 /demo/list） */
+  ROUTE_CHANGE: 'subapp-route-change',
   /** 子应用 401 -> 通知主应用处理登录态（跳登录/刷新 token） */
   UNAUTHORIZED: 'subapp-unauthorized',
   /** 子应用通用事件（示例，业务可自定义扩展） */
