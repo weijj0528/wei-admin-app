@@ -7,7 +7,8 @@ const routes: RouteRecordRaw[] = [
     redirect: '/home',
     children: [
       { path: 'home', name: 'Home', component: () => import('@/views/home/index.vue'), meta: { title: '首页' } },
-      { path: 'demo/list', name: 'DemoList', component: () => import('@/views/demo/list.vue'), meta: { title: '示例列表' } }
+      { path: 'demo/list', name: 'DemoList', component: () => import('@/views/demo/list.vue'), meta: { title: '示例列表' } },
+      { path: 'interact', name: 'Interact', component: () => import('@/views/interact/index.vue'), meta: { title: '交互演示' } }
     ]
   },
   // 兜底回首页
