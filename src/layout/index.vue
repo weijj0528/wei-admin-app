@@ -7,14 +7,6 @@
       <el-tag v-if="micro.standalone" type="warning" size="small">独立模式</el-tag>
       <el-tag v-else type="success" size="small">wujie 子应用</el-tag>
     </header>
-    <nav class="micro-nav">
-      <router-link to="/home">首页</router-link>
-      <router-link to="/demo/list">示例列表</router-link>
-      <router-link to="/interact/context">运行上下文</router-link>
-      <router-link to="/interact/bus">bus 通信</router-link>
-      <router-link to="/interact/permission">按钮权限</router-link>
-      <router-link to="/interact/route">内部路由</router-link>
-    </nav>
     <main class="micro-main"><router-view /></main>
   </div>
 </template>
@@ -47,25 +39,6 @@ const micro = useMicroStore()
 .micro-topbar .info {
   color: #666;
   font-size: 13px;
-}
-.micro-nav {
-  height: 40px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 0 20px;
-  background: #fafafa;
-  border-bottom: 1px solid #eee;
-}
-.micro-nav a {
-  color: #333;
-  text-decoration: none;
-  font-size: 14px;
-}
-.micro-nav a.router-link-active {
-  color: var(--el-color-primary);
-  font-weight: 600;
 }
 .micro-main {
   flex: 1;
