@@ -55,7 +55,7 @@ function subscribeHost() {
 
 <style scoped>
 .home {
-  max-width: 720px;
+  width: 100%;
 }
 .tip {
   color: #999;

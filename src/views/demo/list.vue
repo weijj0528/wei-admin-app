@@ -38,6 +38,6 @@ onMounted(load)
 
 <style scoped>
 .demo-list {
-  max-width: 960px;
+  width: 100%;
 }
 </style>

@@ -10,6 +10,10 @@
     <nav class="micro-nav">
       <router-link to="/home">首页</router-link>
       <router-link to="/demo/list">示例列表</router-link>
+      <router-link to="/interact/context">运行上下文</router-link>
+      <router-link to="/interact/bus">bus 通信</router-link>
+      <router-link to="/interact/permission">按钮权限</router-link>
+      <router-link to="/interact/route">内部路由</router-link>
     </nav>
     <main class="micro-main"><router-view /></main>
   </div>
